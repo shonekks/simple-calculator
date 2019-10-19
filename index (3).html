@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	
+	<style type="text/css">
+		table, th, td
+		{
+			border: 2px solid lightblue;
+			border-radius: 5px;
+			text-align: center;
+			font-weight: bolder;
+			background: powderblue;
+			height:70px;
+			width: 300px;
+		}
+		input{
+			height: 100%;
+			width: 100%;
+			font-weight: bolder; 
+			border: none;
+		}
+		#display{
+			height: 90%;
+			width: 80%;
+			margin: 5px;
+			padding-left: 15px;
+			padding-right: 15px;
+			border-radius: 5px;
+			border: none;
+			font-weight: bolder;
+			font-size: 15pt;
+			text-align: right;
+		}
+	button:hover{background: lightyellow;}
+	</style>	
+</head>
+<body>
+	<center>
+		<br><br><br><br><br>
+		<form name="calc">
+		<table>
+			<tr><td colspan="4"><input type="text" name="disp" id="display" placeholder="0" disabled></td></tr>
+			<tr><td><input type="button" id="bm" onclick="calc.disp.value+='%'" value="%"></td>
+				<td><input type="button" id="bd" onclick="calc.disp.value+='/'" value="/"></td>
+				<td><input type="button" id="bp" onclick="calc.disp.value+='*'" value="*"></td>
+				<td><input type="button" id="bs" onclick="calc.disp.value+='-'" value="-"></td></tr>
+			<tr><td><input type="button" id="b7" onclick="calc.disp.value+='7'" value="7"></td>
+				<td><input type="button" id="b8" onclick="calc.disp.value+='8'" value="8"></td>
+				<td><input type="button" id="b9" onclick="calc.disp.value+='9'" value="9"></td>
+				<td rowspan="2"><input type="button"  id="ba" onclick="calc.disp.value+='+'" value="+"></td></tr>
+			<tr><td><input type="button" id="b4" onclick="calc.disp.value+='4'" value="4"></td>
+				<td><input type="button" id="b5" onclick="calc.disp.value+='5'" value="5"></td>
+				<td><input type="button" id="b6" onclick="calc.disp.value+='6'" value="6"></td></tr>
+			<tr><td><input type="button" id="b1" onclick="calc.disp.value+='1'" value="1"></td>
+				<td><input type="button" id="b2" onclick="calc.disp.value+='2'" value="2"></td>
+				<td><input type="button" id="b3" onclick="calc.disp.value+='3'" value="3"></td>
+				<td rowspan="2"><input type="button" id="be" onclick="calc.disp.value=eval(calc.disp.value)" value="="></td></tr>
+			<tr><td><input type="button" id="b0" onclick="calc.disp.value+='0'" value="0"></td>
+				<td><input type="button" id="dot" onclick="calc.disp.value+='.'" value="."></td>
+				<td><input type="button" id="clr" onclick="calc.disp.value=''" value="Clear"></td></tr>
+		</table>
+		</form>
+</body>
+</html>
